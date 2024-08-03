@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>
+            Title
+        </title>
+        <style>
+            .question {
+                display: none;
+            }
+            #id1 {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <img id="illustration" src="illustration1.svg" />  <br>
+            <div class="question" id="id1">
+                <p>Question1</p> <br>
+                <button class="answer">yes</button><button class="answer">no</button>
+            </div>
+            <div class="question" id="id2">
+                <p>Question2</p> <br>
+                <button class="answer">yes</button><button class="answer">no</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        let game = {
+            state: 1,
+        }
+        let buttons_answer     = document.querySelectorAll(".answer");
+        let image_illustration = document.querySelector("#illustration");
+        for (let i = 0; i < buttons_answer.length; i++) {
+            console.log("aa")
+            buttons_answer[i].addEventListener("click", ()=>{
+                let random = Math.floor(Math.random()*4);
+                image_illustration.src="illustration" + random + ".svg";
+            })
+        }
+    </script>
+</html>
