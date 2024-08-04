@@ -7,7 +7,7 @@
             .question {
                 display: none;
             }
-            #id1 {
+            #div0 {
                 display: block;
             }
         </style>
@@ -15,28 +15,35 @@
     <body>
         <div id="main">
             <img id="illustration" src="drawing.svg" />  <br>
-            <div class="question" id="id1">
-                <p>Question1</p> <br>
-                <button class="answer">yes</button><button class="answer">no</button>
+            <div class="question" id="div0">
+                <p>Question0</p> <br>
+                <button class="answer" id="button0_1">1</button><button class="answer" id="button0_2">2</button>
             </div>
-            <div class="question" id="id2">
+            <div class="question" id="div1">
+                <p>Question1</p> <br>
+            </div>
+            <div class="question" id="div2">
                 <p>Question2</p> <br>
-                <button class="answer">yes</button><button class="answer">no</button>
             </div>
         </div>
     </body>
     <script>
-        let game = {
-            state: 1,
-        }
-        let buttons_answer     = document.querySelectorAll(".answer");
+        let button0_1 = document.querySelector("#button0_1");
+        let button0_2 = document.querySelector("#button0_2");
+
         let image_illustration = document.querySelector("#illustration");
-        for (let i = 0; i < buttons_answer.length; i++) {
-            console.log("aa")
-            buttons_answer[i].addEventListener("click", ()=>{
-                let random = Math.floor(Math.random()*4);
-                image_illustration.src="illustration" + random + ".svg";
-            })
-        }
+        function press_button (dataA, dataB) {
+            let random = Math.floor(Math.random()*4);
+            image_illustration.src="illustration" + random + ".svg";
+            console.log("here");
+
+            let divA = document.querySelector("#div"+dataA);
+            let divB = document.querySelector("#div"+dataB);
+            divA.style.display = "none";
+            divB.style.display = "block";
+        }   
+        
+        button0_1.addEventListener("click",()=>{press_button(0,1)});
+        button0_2.addEventListener("click",()=>{press_button(0,2)});
     </script>
 </html>
