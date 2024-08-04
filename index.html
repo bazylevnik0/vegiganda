@@ -14,7 +14,7 @@
     </head>
     <body>
         <div id="main">
-            <img id="illustration" src="drawing.svg" />  <br>
+            <img id="illustration" src="drawing0.svg" />  <br>
             <div class="question" id="div0">
                 <p>Question0</p> <br>
                 <button class="answer" id="button0_1">1</button><button class="answer" id="button0_2">2</button>
@@ -32,9 +32,13 @@
         let button0_2 = document.querySelector("#button0_2");
 
         let image_illustration = document.querySelector("#illustration");
+        let current_illustration = 0;
         function press_button (dataA, dataB) {
             let random = Math.floor(Math.random()*4);
-            image_illustration.src="illustration" + random + ".svg";
+            while (random == current_illustration) {
+                random = Math.floor(Math.random()*4);                
+            } current_illustration = random;
+            image_illustration.src="drawing" + random + ".svg";
             console.log("here");
 
             let divA = document.querySelector("#div"+dataA);
