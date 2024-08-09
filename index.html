@@ -68,8 +68,26 @@
             </div>
             <div class="question" id="div5">
                 <p>Are you ready for vegy diete?</p> <br>
-                <button class="answer" id="button4_0">No</button>
-                <button class="answer" id="button4_1">Yes</button>
+                <button class="answer" id="button5_0">No</button>
+                <button class="answer" id="button5_1">Yes</button>
+            </div>
+            <div class="question" id="div6">
+                <p>Do you know about environmental vegetarianism?</p> <br>
+                <button class="answer" id="button6_0">No</button>
+                <button class="answer" id="button6_1">Yes</button>
+            </div>
+            <div class="question" id="div7">
+                <p>It is the practice to create diete without negative impact to environment.</p> <br>
+                <button class="answer" id="button7_0">...</button>
+            </div>
+            <div class="question" id="div8">
+                <p>Emmision of gas by creating(growing) beef is 99.5 kg CO2 per kilogram of the beef product. For eggs it is 5 kg CO2, for potatoes 0.5 kg CO2 by growing one killogram of potatoes.</p> <br>
+                <button class="answer" id="button8_0">...</button>
+            </div>
+            <div class="question" id="div9">
+                <p>Are you ready for vegy diete?</p> <br>
+                <button class="answer" id="button9_0">No</button>
+                <button class="answer" id="button9_1">Yes</button>
             </div>
         </div>
     </body>
@@ -103,5 +121,15 @@
         document.querySelector("#button3_0").addEventListener("click",()=>{press_button(3,4)});
 
         document.querySelector("#button4_0").addEventListener("click",()=>{press_button(4,5)});
+
+        document.querySelector("#button5_0").addEventListener("click",()=>{press_button(5,6)});
+        document.querySelector("#button5_1").addEventListener("click",()=>{press_button(5,999)});
+
+        document.querySelector("#button6_0").addEventListener("click",()=>{press_button(6,7)});
+        document.querySelector("#button6_1").addEventListener("click",()=>{press_button(6,8)});
+
+        document.querySelector("#button7_0").addEventListener("click",()=>{press_button(7,8)});
+
+        document.querySelector("#button8_0").addEventListener("click",()=>{press_button(8,9)});
     </script>
 </html>
